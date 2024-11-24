@@ -1,0 +1,84 @@
+.our-teachers {
+    background: $white;
+    padding: 2rem 0 0 0;
+    @include laptop {
+        padding: 4rem 0;
+    }
+    &__heading {
+        position: relative;
+        color: $primary-color;
+        z-index: 1;
+    }
+    &__container {
+       display: flex;
+       flex-wrap:wrap;
+       align-items: center;
+       justify-content: center;
+    }
+    &__card {
+        width: 98%;
+        margin:0 2% 2rem 2%;
+        height: auto;
+        @include iphone {
+            width: 42.5%;
+            margin: 0 3.7% 2rem 3.7%;
+            height: auto;
+        }
+        @include tablet {
+            width: 29.333%;
+            margin:0 2% 1.5rem 2%;
+            height: 380px;
+        }
+        @include laptop {
+            width: 29.333%;
+            margin:0 2%;
+            height: 415px;
+        }
+        @include desktop-small {
+            width: 21%;
+            margin:0 2%;
+            height: 390px;
+        }
+    }
+    &__img {
+        width: auto;
+        max-width: 96%;
+        border-radius: 50%;
+        border: 5.5px solid $white;
+        margin: 0;
+        padding: 0;
+        filter: grayscale(1);
+    }
+    &__img-wrap {
+        border: 2px solid $primary-color;
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        color: $primary-color;
+        font-size: 1.3rem;
+        margin: 0.5rem;
+    }
+    &__subtitle {
+        font-family: $heading-font-family;
+        color: $secondary-color;
+        font-size: 0.85rem;
+        margin: 0;
+    }
+    &__content {
+        font-size: 0.95rem;
+        padding: 0;
+        @include laptop {
+            padding: 0 5rem;
+        }
+    }
+    &__card-content {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin: 0.5rem 0 0 0;
+        line-height: 1rem;
+    }
+}

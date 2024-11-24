@@ -1,0 +1,102 @@
+.testimonials {
+    position: relative;
+    background: $primary-color;
+    padding:0;
+    padding: 2.5rem 0 4rem 0;
+    background-image: url("../images/parallax-background-new.jpg");
+    background-repeat: no-repeat;
+    background-size: 300%;
+    @include iphone {
+        background-size: 220%;
+    }
+    @include tablet {
+        background-size: 160%;
+    }
+    @include desktop-small {
+        background-size: 130%;
+    }
+    @include desktop {
+        background-size: cover;
+    }
+    &__container {
+        margin: 3rem 0 0 0;
+    }
+    &__heading {
+        position: relative;
+        color: $white;
+        z-index: 1;
+    }
+    &__title {
+        color: lighten($secondary-color, 20%);
+        z-index: 1;
+        font-size: 1.1rem;
+        @include desktop {
+            font-size: 1.25rem;
+        }
+        margin: 0.8rem 0 0 0;
+    }
+    &__item {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 1rem;
+        padding: 1.6rem 1rem;
+        text-align: center;
+        color: $white;
+        z-index: 1;
+    }
+    &__icon {
+        max-width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+    }
+    &__comment {
+        font-family: $heading-font-family;
+        font-style: italic;
+        font-weight: 400;
+        color: $white;
+        font-size: 1.1rem;
+        z-index: 1;
+        min-height: 120px;
+        @include desktop-small {
+            font-size: 1rem;
+            min-height: 127px;
+        }
+        @include desktop {
+            min-height: 110px;
+            font-size: 1.1rem;
+        }
+        margin: 0.8rem 0 1rem 0;
+        line-height: 1.6rem;
+    }
+    &__star {
+        color: orange;
+    }
+    & .container::before {
+        content: "";
+        background: #124a8a;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.75;
+        z-index: 0;
+    }
+    &__btn {
+        position: relative;
+        display: inline-block;
+        background: $white;
+        border-radius: 1.8rem;
+        color: $primary-color;
+        padding: 0.8rem 2rem;
+        margin: 0.3rem 0;
+        z-index: 1;
+        text-decoration: none;
+        margin-top: 2rem;
+        transition: background 0.15s ease-in;
+    }
+    &__btn:hover {
+        background: lighten($secondary-color, 25%);
+    }
+}

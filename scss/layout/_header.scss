@@ -1,0 +1,273 @@
+.main-menu {
+  position:absolute;
+  z-index:99;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 0 2rem 0;
+  @include laptop {
+    padding: 2.35rem 0 0 0;
+  }
+  background: rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  &__close {
+    z-index: 999999;
+    position: absolute;
+    right: 1rem;
+    color: white;
+    top: 1rem;
+    display: none;
+    @include laptop {
+        display: none;
+    }
+  }
+  &__close.active {
+    display:block;
+  }
+  &__menu {
+      margin-top: 0;
+      margin-left: auto;
+      list-style-type: none;
+      display: none;
+      margin-bottom: 0;
+      background: $primary-color;
+      position: absolute;
+      top: 0;
+      //left: 60%;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      left: 15%;
+      @include tablet {
+        left: 60%
+      }
+      @include laptop {
+        margin-top: 0.8rem;
+        display: block;
+        background: transparent;
+        position: unset;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        height: auto;
+      }
+  }
+  &__menu.active {
+    display: block !important;
+    animation-name: example-3;
+    animation-duration: 0.5s;
+    padding-top: 3.5rem;
+    padding-left: 0;
+  }
+  @keyframes example-3 {
+        from {opacity: 0; left: 100%;}
+        to {opacity: 0.9; left: 15%}
+  }
+
+  @include tablet {
+    @keyframes example-3 {
+        from {opacity: 0; left: 100%;}
+        to {opacity: 0.9; left: 60%}
+    }
+  }
+  &__list {
+      display: block;
+      padding: 0.8rem 1rem 0.8rem 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 0;
+      @include laptop {
+        display: inline-block;
+        padding: 0 0 3rem 2.2rem;
+        border-top: 0px solid rgba(255, 255, 255, 0.1);
+        margin-top: 0;
+      }
+  }
+  &__list:nth-child(2):hover {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-position: 55px bottom;
+    background-size: 22px;
+    @include laptop {
+        background-image: url("../images/chevron.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-position: 55px bottom;
+        background-size: 22px;
+    }
+  }
+  &__link {
+      color: lighten($secondary-color, 30%);
+      letter-spacing: 0.02rem;
+      font-size: 0.95rem;
+      transition: color 0.15s ease-in;
+      position: relative;
+  }
+  &__link:hover {
+    color: $white;
+  }
+  &__link:hover::after {
+    content: "";
+    background: $primary-color;
+    width: 100%;
+    height: 2px;
+    display: block;
+    margin-top:3px;
+    opacity: 0;
+    animation-name: example;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    position: absolute;
+  }
+  @keyframes example {
+    from {opacity: 0; margin-top:3px;}
+    to {opacity: 1; margin-top:0;}
+  }
+  &__container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 91%;
+      justify-content: center;
+      @include desktop-small {
+        width: 90%;
+        justify-content: unset;
+      }
+      @include desktop {
+        width: 75%;
+      }
+  }
+  &__logo {
+      width: 175px;
+      height: 100%;
+      @include iphone {
+        width: 230px;
+      }
+  }
+  &__submenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    list-style-type: none;
+    display: none;
+    z-index: 1;
+  }
+
+  &__list:hover .main-menu__submenu {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1.7rem 2% 1.4rem 2%;
+        @include laptop {
+            display: flex;
+        }
+        @include desktop-small {
+            padding:2rem 4%;
+        }
+        @include desktop {
+            padding:2rem 9.5%;
+        }
+        background: rgba(137, 155, 154, 0.9);
+        //top: 100%; // Ensure it appears below the parent
+        top: 8rem;
+        animation-name: example-2;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        margin-top: -0.3rem;
+  }
+
+  /*
+    &__list .main-menu__submenu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1.7rem 2% 1.4rem 2%;
+        @include desktop-small {
+            padding:2rem 4%;
+        }
+        background: rgba(137, 155, 154, 0.8);
+        //top: 100%; // Ensure it appears below the parent
+        top: 8rem;
+        animation-name: example-2;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        margin-top: -0.3rem;
+      }
+*/
+  @keyframes example-2 {
+    from {opacity: 0; top: 8.2rem;}
+    to {opacity: 1; top: 8rem;}
+  }
+  &__sublist {
+    display: inline-block;
+    width: 15.666%;
+    margin: 0 0.5%;
+  }
+  &__sublink {
+    transform: scale(1);
+    transition: transform 0.15s ease-in;
+  }
+  &__sublink:hover {
+    transform: scale(1.01);
+  }
+  &__sublink-card {
+    border: 1px solid #eef5fd;
+    background: #f9fafb;
+    border-radius: 1rem;
+    padding: 0.6rem 0.75rem 1rem 0.75rem;
+    @include desktop {
+        padding: 0.6rem 1rem 1rem 1rem;
+    }
+    display:block;
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+  &__sublink-icon {
+    width: 50px;
+    @include desktop-small {
+        width: 60px;
+    }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__sublink-heading {
+    display: inline-block;
+    color: $primary-color;
+    letter-spacing: 0.02rem;
+    margin: 0.7rem 0 0 0;
+    font-size: 0.88rem;
+    @include desktop-small {
+        font-size: 1.05rem;
+        letter-spacing: 0.04rem;
+    }
+  }
+  &__sublink-content {
+    opacity: 0.8;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    @include desktop {
+        font-size: 0.85rem;
+        line-height: 1.2rem;
+    }
+    padding: 0;
+    margin: 0.5rem 0 0.6rem 0;
+  }
+  &__sublink-btn {
+    display: inline-block;
+    background: $primary-color;
+    border-radius: 1.8rem;
+    color: #ffffff;
+    padding: 0.39rem 1.2rem;
+    margin: 0.3rem 0;
+    font-size: 0.73rem;
+    @include desktop-small {
+        font-size: 0.82rem;
+    }
+    transition: background 0.15s ease-in;
+  }
+  &__sublink-btn:hover {
+    background: $secondary-color;
+  }
+}

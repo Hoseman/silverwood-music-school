@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+
+//@import "base/reset";
+
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/extends";
+@import "abstracts/extends";
+@import "abstracts/animations";
+@import "abstracts/breakpoints";
+@import "abstracts/z-index";
+
+@import "base/typography";
+
+@import "components/button";
+@import "components/carousel";
+@import "components/mission-statement";
+@import "components/home-intro";
+@import "components/owl";
+@import "components/home-testimonials";
+@import "components/underline";
+@import "components/our-courses";
+@import "components/our-mission";
+@import "components/our-teachers";
+@import "components/footer-images";
+@import "components/colleges";
+@import "components/hamburger";
+@import "components/parallax";
+
+@import "layout/containers";
+@import "layout/footer";
+@import "layout/header";
+
+@import "pages/home";
+
+@import "shame/shame";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

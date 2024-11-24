@@ -1,0 +1,81 @@
+$primary-text-color: #1d262f;
+$heading-line-height: 2;
+$body-line-height: 1.8rem;
+
+.lora-100 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+$heading-font-family: "Lora", serif;
+$body-font-family: "Poppins", sans-serif;
+
+body {
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  color: $primary-text-color;
+}
+
+.body-active {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+a {
+  cursor:pointer;
+  color: $primary-text-color;
+  text-decoration: none;
+}
+p {
+  color: $tertiary-color;
+  font-size:1rem;
+  line-height:$body-line-height;
+  margin: 1.35rem 0;
+}
+p a {
+  color: $tertiary-color;
+  text-decoration: underline;
+}
+
+h2 {
+  font-family: $heading-font-family;
+  font-size: 1.8rem;
+  @include desktop-small {
+    font-size: 1.95rem;
+  }
+  @include desktop {
+    font-size: 2.05rem;
+  }
+  text-transform: uppercase;
+}
+h3 {
+  font-family: $heading-font-family;
+  font-size: 1.85rem;
+
+}
+h4 {
+  font-family: $heading-font-family;
+  font-size: 1.43rem;
+}
+
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$heavy: 900;
+
+.text-center {
+  text-align: center;
+}

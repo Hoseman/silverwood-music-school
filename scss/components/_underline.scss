@@ -1,0 +1,9 @@
+.underline {
+    background: lighten($secondary-color, 25%);
+    width: 247px;
+    height: 3px;
+    margin-left: auto;
+    margin-right:auto;
+    z-index:99999;
+    opacity:0.8;
+}

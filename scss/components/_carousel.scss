@@ -1,0 +1,164 @@
+.home-carousel {
+    position: relative;
+    &__heading {
+        color: white;
+        text-align:center;
+        font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2.2rem;
+        margin: 3.3rem 0 1.3rem 0;
+        line-height: 2.8rem;
+        padding: 0 1rem;
+        @include iphone {
+            font-size: 2.8rem;
+            margin: 3.3rem 0 1.3rem 0;
+            line-height: 3.4rem;
+            padding: 0 3.3rem;
+        }
+        @include tablet {
+            font-size: 2.8rem;
+            margin: 3.3rem 0 1.3rem 0;
+            line-height: 3.4rem;
+            padding: 0;
+        }
+        @include desktop-small {
+            font-size: 3.6rem;
+            margin: 3.3rem 0 1.8rem 0;
+            line-height: 4.3rem;
+        }
+        @include desktop {
+            font-size: 4.35rem;
+            margin: 3rem 0 2.45rem 0;
+            line-height: 4.5rem;
+        }
+        z-index:1;
+    }
+    &__subheading {
+        color: white;
+        text-align:center;
+        font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.25rem;
+        line-height: 2.4rem;
+        margin: 0.7rem 0;
+        @include iphone {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+            margin: 0.8rem 0;
+        }
+        @include tablet {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            margin: 0.9rem 0;
+        }
+        @include desktop-small {
+            font-size: 2.35rem;
+            line-height: 3.2rem;
+            margin: 1.6rem 0;
+        }
+        @include desktop {
+            font-size: 2.6rem;
+            line-height: 3.5rem;
+            margin: 1.9rem 0;
+        }
+        z-index: 1;
+    }
+    &__underline {
+        background: #899b9a;
+        width: 260px;
+        height: 5px;
+        display: block;
+        margin: 0 auto;
+        z-index:1;
+        opacity: 0.7;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        height: 700px;
+        @include desktop {
+            height: 800px;;
+        }
+    }
+    &__card {
+        width: 100%;
+        height: auto;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right:0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    &__content::after {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.25);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index:0;
+    }
+    &__btn {
+        background: $primary-color;
+        border-radius: 2rem;
+        color: $white;
+        padding: 0.7rem 1.95rem;
+        letter-spacing: 0.05rem;
+        z-index: 1;
+        transition: background 0.15s ease-in;
+    }
+    &__btn:hover {
+        background: $secondary-color;
+    }
+}
+
+.mouse-image {
+    position: absolute;
+    bottom: 2.9rem;
+    z-index: 10;
+    width: 35px;
+    left: 50%;
+    margin-left: -17.5px;
+    &__img {
+        animation-name: mouse-animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    &__arrow {
+        animation-name: mouse-animation-2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes mouse-animation {
+    0%   {opacity: 0.5; margin-bottom: 0;}
+    25%  {opacity: 0.7; margin-bottom: 0.1rem}
+    50%  {opacity: 0.5; margin-bottom: 0;}
+    75%  {opacity: 0.7; margin-bottom: 0.1rem}
+    100%  {opacity: 0.5; margin-bottom: 0;}
+}
+@keyframes mouse-animation-2 {
+    0%   {margin-bottom: 0; opacity: 0.3;}
+    25%  {margin-bottom: 0.5rem; opacity: 0.5;}
+    50%  {margin-bottom: 0; opacity: 0.3;}
+    75%  {margin-bottom: 0.5rem; opacity: 0.5;}
+    100%  {margin-bottom: 0; opacity: 0.3;}
+}

@@ -1,0 +1,23 @@
+{
+  "name": "silverwood-music-school",
+  "version": "1.0.0",
+  "description": "Silverwood Music School website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.32.13"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.3.4"
+  }
+}

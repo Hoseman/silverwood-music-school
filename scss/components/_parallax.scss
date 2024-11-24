@@ -1,0 +1,67 @@
+.parallax {
+  position: relative;
+  &__container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  &__container::before {
+    content: "";
+    background: #1758a2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.75;
+    z-index: 1;
+  }
+  &__img1 {
+    width: 100%;
+    object-fit: cover;
+    height:715px;
+    @include iphone {
+      height:700px;
+    }
+    @include tablet {
+      height:680px;
+    }
+    @include laptop {
+      height:657px;
+    }
+    @include desktop-small {
+      height:680px;
+    }
+    @include desktop {
+      height:645px;
+    }
+    margin-bottom: -0.5rem;
+  }
+  &__img2 {
+    width: 100%;
+    object-fit: cover;
+    height:500px;
+    @include iphone {
+      height:500px;
+    }
+    @include tablet {
+      height:500px;
+    }
+    @include laptop {
+      height:657px;
+    }
+    @include desktop-small {
+      height:680px;
+    }
+    @include desktop {
+      height:645px;
+    }
+    margin-top: 2.9rem;
+  }
+  &__content {
+    position:relative;
+    z-index: 5;
+  }
+}
+

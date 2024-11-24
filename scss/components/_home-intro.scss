@@ -1,0 +1,162 @@
+.intro {
+    background: $white;
+    padding: 2.5rem 0 3rem 0;
+    &__container {
+        display: flex;
+        flex-wrap:wrap;
+        position: relative;
+    }
+    &__row:nth-child(1) {
+        width: 100%;
+        margin-right: 0%;
+        @include iphone{
+            width: 90%;
+            margin-right: 7%;
+        }
+        @include tablet{
+            width: 65%;
+            margin-right: 7%;
+        }
+        @include desktop {
+            width: 70%;
+            margin-right: 7%;
+        }
+        margin-top: 0;
+    }
+    &__row:nth-child(2) {
+        width: 100%;
+        @include iphone {
+            width: 10%;
+        }
+        @include tablet {
+            width: 28%;
+        }
+        @include desktop {
+            width: 23%;
+        }
+    }
+    &__heading {
+        display: inline-block;
+        color: $primary-color;
+        letter-spacing: 0.09rem;
+        margin: 0.7rem 0;
+        width: 100%;
+        @include desktop {
+            width: 40%;
+        }
+    }
+    &__heading-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__contact {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 0.8rem;
+        margin-top: 0.3rem;
+        @include desktop {
+            width: 60%;
+            justify-content: flex-end;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        display: flex;
+        flex-wrap:wrap;
+        margin-left: auto;
+        align-items: center;
+    }
+    &__subheading {
+        font-family: "Lora", serif;
+        color: $secondary-color;
+        font-size: 1.38rem;
+        padding: 0;
+        @include iphone {
+            padding: 0 8rem 0 0;
+        }
+        @include tablet {
+            padding: 0 4rem 0 0;
+        }
+        @include desktop-small {
+            padding: 0 7rem 0 0;
+        }
+        @include desktop {
+            padding: 0 15rem 0 0;
+        }
+        margin: 1.35rem 0;
+        font-weight: 500;
+    }
+    &__content {
+        margin: 2rem 0;
+        line-height: 2rem;
+    }
+    &__underline {
+        color:transparent;
+        border-top: 0.2px solid #eee;
+    }
+    &__tel {
+        font-size: 0.9rem;
+        width: 100%;
+        @include iphone {
+            width: auto;
+        }
+        @include desktop {
+            font-size: 0.97rem;
+        }
+        text-decoration: none;
+        color: $secondary-color;
+        padding-left: 0%;
+    }
+    &__email {
+        font-size: 0.9rem;
+        width: 100%;
+        padding-left: 0%;
+        @include iphone {
+            width: auto;
+            padding-left: 7%;
+        }
+        @include desktop {
+            font-size: 0.97rem;
+        }
+        text-decoration: none;
+        color: $secondary-color;
+    }
+    &__btn {
+        display: inline-block;
+        background: $primary-color;
+        border-radius: 1.8rem;
+        color: white;
+        padding: 0.8rem 2rem;
+        margin: 0.3rem 0;
+        transition: background 0.15s ease-in;
+    }
+    &__btn:hover {
+        background: $secondary-color;
+    }
+    &__img {
+        width: 96%;
+        height: auto;
+        border: 7px solid $white;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        transform: rotate(0deg);
+        position: relative;
+        top: unset;
+        right: unset;
+        @include iphone {
+            transform: rotate(8deg);
+            border: 7px solid $white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 130px;
+        }
+        @include tablet {
+            width: 96%;
+            transform: rotate(8deg);
+            border: 7px solid $white;
+            position: relative;
+            top: unset;
+            right: unset;
+        }
+        margin-top: 1.5rem;
+    }
+}

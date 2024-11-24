@@ -1,0 +1,42 @@
+.footer-images {
+    display: flex;
+    width: 100%;
+    &__img {
+        width: 20%;
+        @include iphone {
+            width: 16.666%;
+        }
+        @include tablet {
+            width: 14.285%;
+        }
+        height: auto;
+        display:inline-block;
+    }
+    // &__img:nth-child(5) {
+    //     display:none;
+    //     @include iphone {
+    //         display:none;
+    //     }
+    //     @include tablet {
+    //         display:none;
+    //     }
+    // }
+    &__img:nth-child(6) {
+        display:none;
+        @include iphone {
+            display:none;
+        }
+        @include tablet {
+            display:inline-block;
+        }
+    }
+    &__img:nth-child(7) {
+        display:none;
+        @include iphone {
+            display:inline-block;
+        }
+        @include tablet {
+            display:inline-block;
+        }
+    }
+}
